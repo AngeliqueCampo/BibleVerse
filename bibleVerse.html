@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Verse</title>
+    <style>
+        body {
+            font-family: Verdana;
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0;
+            background-color: white;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="verseContainer">
+        <h1>Ephesians 5:15-16</h1>
+        <p>"Be very careful, then, how you live—not as unwise but as wise, making the most of every opportunity, because the days are evil."</p>
+    </div>
+
+    <!-- Button container -->
+    <div class="button-container">
+        <button onclick="addDesign()">Add Design</button>
+        <button onclick="removeDesign()">Remove Design</button>
+    </div>
+
+    <script>
+        function addDesign() {
+            document.body.style.backgroundColor = '#FFF7E8';
+            
+            const container = document.querySelector('#verseContainer');
+            container.style.backgroundColor = '#E8F0FF';
+            container.style.border = 'solid 2px #000';
+            container.style.padding = '25px';
+            container.style.width = '500px';
+            container.style.borderRadius = '10px';
+            container.style.fontFamily = 'Georgia';
+        }
+
+        function removeDesign() {
+            document.body.removeAttribute('style'); 
+            const container = document.querySelector('#verseContainer');
+            container.removeAttribute('style'); 
+        }
+    </script>
+</body>
+</html>
